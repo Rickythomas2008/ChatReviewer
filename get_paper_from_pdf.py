@@ -7,7 +7,7 @@ import re
 
 class Paper:
     def __init__(self, path, title='', url='', abs='', authors=[]):
-        # 初始化函数，根据pdf路径初始化Paper对象                
+        # 初始化函数，根据pdf路径初始化Paper对象
         self.url = url  # 文章链接
         self.path = path  # pdf路径
         self.section_names = []  # 段落标题
@@ -86,9 +86,9 @@ class Paper:
                         font_size = block["lines"][0]["spans"][0]["size"]  # 获取第一行第一段文字的字体大小
                         # print(font_size)
                         if abs(font_size - max_font_sizes[-1]) < 0.3 or abs(font_size - max_font_sizes[-2]) < 0.3:
-                            # print("The string is bold.", max_string, "font_size:", font_size, "font_flags:", font_flags)                            
+                            # print("The string is bold.", max_string, "font_size:", font_size, "font_flags:", font_flags)
                             if len(cur_string) > 4 and "arXiv" not in cur_string:
-                                # print("The string is bold.", max_string, "font_size:", font_size, "font_flags:", font_flags) 
+                                # print("The string is bold.", max_string, "font_size:", font_size, "font_flags:", font_flags)
                                 if cur_title == '':
                                     cur_title += cur_string
                                 else:
