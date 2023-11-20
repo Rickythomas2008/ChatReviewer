@@ -67,7 +67,7 @@ class Reviewer:
 
     def validateTitle(self, title):
         # 修正论文的路径格式
-        rstr = r"[\/\\\:\*\?\"\<\>\|]" # '/ \ : * ? " < > |'
+        rstr = "..//output_file//" # '/ \ : * ? " < > |'
         new_title = re.sub(rstr, "_", title) # 替换为下划线
         return new_title
 
